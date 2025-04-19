@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seblak Dago - Lezatnya Seblak Khas Bandung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1632818924548-be2dfec4e4cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+        }
+        
+        .menu-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu-card {
+            transition: all 0.3s ease;
+        }
+        
+        .pedas-level {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        
+        .pedas-1 {
+            background-color: #FEE2E2;
+        }
+        
+        .pedas-2 {
+            background-color: #FECACA;
+        }
+        
+        .pedas-3 {
+            background-color: #FCA5A5;
+        }
+        
+        .pedas-4 {
+            background-color: #F87171;
+        }
+        
+        .pedas-5 {
+            background-color: #EF4444;
+        }
+    </style>
+</head>
+<body class="bg-orange-50">
+    <!-- Header/Navbar -->
+    <header class="bg-orange-500 text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <nav class="bg-orange-500 px-6 py-4 flex items-center justify-between">
+                    <div class="flex items-center space-x-2">
+                      <img src="dago-removebg-preview.png" alt="" class="w-2000 h-12 object-contain">
+                
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-orange-300 font-medium">Beranda</a>
+                <a href="#menu" class="hover:text-orange-300 font-medium">Menu</a>
+                <a href="#about" class="hover:text-orange-300 font-medium">Tentang Kami</a>
+                <a href="#order" class="hover:text-orange-300 font-medium">Pesan</a>
+                <a href="#contact" class="hover:text-orange-300 font-medium">Kontak</a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <i class="flex gap-10 text-white font-semibold text-lg"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-orange-600 px-4 py-2">
+            <a href="#home" class="block py-2 hover:text-orange-300">Beranda</a>
+            <a href="#menu" class="block py-2 hover:text-orange-300">Menu</a>
+            <a href="#about" class="block py-2 hover:text-orange-300">Tentang Kami</a>
+            <a href="#order" class="block py-2 hover:text-orange-300">Pesan</a>
+            <a href="#contact" class="block py-2 hover:text-orange-300">Kontak</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-cover bg-c760655.jpegenter py-12" style="background-image: url('bg.jpeg');">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-5xl font-extrabold mb-4 text-white drop-shadow-lg">Seblak Dago Khas Bandung</h1>
+                <p class="text-xl mb-8 text-white drop-shadow-md">Rasakan kelezatan seblak dengan bumbu rempah pilihan dan kerupuk yang renyah. Dibuat dengan bahan-bahan segar dan resep turun temurun.</p>
+                <div class="flex space-x-4">
+                    <a href="#order" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full transition duration-300">Pesan Sekarang</a>
+                    <a href="#menu" class="bg-white hover:bg-gray-100 text-orange-500 font-bold py-3 px-6 rounded-full transition duration-300">Lihat Menu</a>
+                    
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+
+                </div>
+            </div>
+            <div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-orange-500 mb-2">Menu Andalan Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Pilih dari berbagai varian seblak lezat kami yang dibuat dengan bahan-bahan pilihan</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu Item 1 -->
+                <div class="menu-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="Seblak Cilok Jamur Enoki.jpeg" alt="Seblak Original" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Seblak Cilok Jamur Enoki</h3>
+                            <span class="bg-orange-100 text-orange-800 text-sm font-semibold px-3 py-1 rounded-full">Rp19.000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Kerupuk, Telur, Cilok, Jamur enoki, Pilus, Siomay Kering .</p>
+                        <div class="mb-4">
+                            <span class="text-sm font-medium text-gray-700">Level Pedas:</span>
+                            <div class="mt-1">
+                                <span class="pedas-level pedas-1" title="Sedang"></span>
+                                <span class="pedas-level pedas-2" title="Sedang"></span>
+                                <span class="pedas-level pedas-3" title="Sedang"></span>
+                                <span class="pedas-level pedas-4" title="Sedang"></span>
+                                <span class="pedas-level pedas-5" title="Sedang"></span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded transition duration-300">
+                            <i class="fas fa-cart-plus mr-2"></i> Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 2 -->
+                <div class="menu-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="Seblak Tulang Cuanki.jpeg" alt="Seblak Tulang Cuanki" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Seblak Tulang Cuanki</h3>
+                            <span class="bg-orange-100 text-orange-800 text-sm font-semibold px-3 py-1 rounded-full">Rp18.000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Kerupuk, Telur, Pilus, Siomay Kering, Tulang, Cuanki.</p>
+                        <div class="mb-4">
+                            <span class="text-sm font-medium text-gray-700">Level Pedas:</span>
+                            <div class="mt-1">
+                                <span class="pedas-level pedas-1" title="Sedang"></span>
+                                <span class="pedas-level pedas-2" title="Sedang"></span>
+                                <span class="pedas-level pedas-3" title="Sedang"></span>
+                                <span class="pedas-level pedas-4" title="Sedang"></span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded transition duration-300">
+                            <i class="fas fa-cart-plus mr-2"></i> Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 3 -->
+                <div class="menu-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="Seblak Kwetiau.jpeg" alt="Seblak Kwetiau Ceker Jamur Enoki" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Seblak Kwetiau Ceker Jamur Enoki</h3>
+                            <span class="bg-orange-100 text-orange-800 text-sm font-semibold px-3 py-1 rounded-full">Rp20.000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Kerupuk, Telur, Pilus, Siomay Kering, Kwetiau, Ceker, Jamur Enoki.</p>
+                        <div class="mb-4">
+                            <span class="text-sm font-medium text-gray-700">Level Pedas:</span>
+                            <div class="mt-1">
+                                <span class="pedas-level pedas-1" title="Sedang"></span>
+                                <span class="pedas-level pedas-2" title="Sedang"></span>
+                                <span class="pedas-level pedas-3" title="Sedang"></span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded transition duration-300">
+                            <i class="fas fa-cart-plus mr-2"></i> Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 4 -->
+                <div class="menu-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="Seblak sosis otak otak.jpeg" alt="Seblak sosis otak otak" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Seblak sosis otak otak</h3>
+                            <span class="bg-orange-100 text-orange-800 text-sm font-semibold px-3 py-1 rounded-full">Rp18.000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Kerupuk, Telur, Pilus, Siomay Kering, sosis, otak otak.</p>
+                        <div class="mb-4">
+                            <span class="text-sm font-medium text-gray-700">Level Pedas:</span>
+                            <div class="mt-1">
+                                <span class="pedas-level pedas-1" title="Sedang"></span>
+                                <span class="pedas-level pedas-2" title="Sedang"></span>
+                                <span class="pedas-level pedas-3" title="Sedang"></span>
+                                <span class="pedas-level pedas-4" title="Sedang"></span>
+                                <span class="pedas-level pedas-5" title="Sedang"></span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded transition duration-300">
+                            <i class="fas fa-cart-plus mr-2"></i> Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 5 -->
+                <div class="menu-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="Seblak  Ceker Bakso.jpeg" alt="Seblak Ceker Bakso" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Seblak Ceker Bakso</h3>
+                            <span class="bg-orange-100 text-orange-800 text-sm font-semibold px-3 py-1 rounded-full">Rp20.000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Kerupuk, Telur, Pilus, Siomay Kering, Ceker, Bakso.</p>
+                        <div class="mb-4">
+                            <span class="text-sm font-medium text-gray-700">Level Pedas:</span>
+                            <div class="mt-1">
+                                <span class="pedas-level pedas-1" title="Sedang"></span>
+                                <span class="pedas-level pedas-2" title="Sedang"></span>
+                                <span class="pedas-level pedas-3" title="Sedang"></span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded transition duration-300">
+                            <i class="fas fa-cart-plus mr-2"></i> Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 6 -->
+                <div class="menu-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="Seblak Istimewa Sosis Jumbo.jpeg" alt="Seblak Istimewa Sosis Jumbo" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Seblak Istimewa Sosis Jumbo</h3>
+                            <span class="bg-orange-100 text-orange-800 text-sm font-semibold px-3 py-1 rounded-full">Rp27.000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Telur, Chikuwa, Pilus, Sosis Jumbo, Siomay Kering.</p>
+                        <div class="mb-4">
+                            <span class="text-sm font-medium text-gray-700">Level Pedas:</span>
+                            <div class="mt-1">
+                                <span class="pedas-level pedas-1" title="Sedang"></span>
+                                <span class="pedas-level pedas-2" title="Sedang"></span>
+                                <span class="pedas-level pedas-3" title="Sedang"></span>
+                                <span class="pedas-level pedas-4" title="Sedang"></span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded transition duration-300">
+                            <i class="fas fa-cart-plus mr-2"></i> Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Menu Item 7 -->
+                <div class="menu-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="Seblak mie Dumpling Chesse.jpeg" alt="Seblak Mie Dumpling Chesse" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Seblak mie Dumpling Chesse</h3>
+                            <span class="bg-orange-100 text-orange-800 text-sm font-semibold px-3 py-1 rounded-full">Rp27.000</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Kerupuk, Telur, Pilus, Siomay Kering, Mie, Dumpling chesee.</p>
+                        <div class="mb-4">
+                            <span class="text-sm font-medium text-gray-700">Level Pedas:</span>
+                            <div class="mt-1">
+                                <span class="pedas-level pedas-1" title="Sedang"></span>
+                                <span class="pedas-level pedas-2" title="Sedang"></span>
+                                <span class="pedas-level pedas-3" title="Sedang"></span>
+                                <span class="pedas-level pedas-4" title="Sedang"></span>
+                            </div>
+                        </div>
+                        <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded transition duration-300">
+                            <i class="fas fa-cart-plus mr-2"></i> Tambah ke Keranjang
+                        </button>
+                    </div>
+                </div>    
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#order" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    Lihat Semua Menu & Pesan Sekarang
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-orange-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="sblk(1).jpeg" alt="Dapur Seblak Dago" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-orange-500 mb-4">Tentang Seblak Dago</h2>
+                    <p class="text-gray-700 mb-4">
+                        Seblak Dago hadir sebagai cita rasa khas dari Bandung yang merantau hingga Semarang. Berdiri sejak tahun 2015-2016, usaha ini berawal dari semangat sang owner yang pernah merantau ke Bandung dan jatuh cinta pada cita rasa seblak, baso aci, cimol, dan cireng..
+                    </p>
+                    <p class="text-gray-700 mb-4">
+                        Berawal dari sebuah grobak sederhana di depan Universitas Diponegoro (UNDIP), usaha ini mulai tumbuh berkat ajakan seorang teman untuk merintis bersama di Semarang. Nama Seblak Dago sendiri terinspirasi dari kawasan Dago di Bandung, tempat penuh kenangan yang memantik semangat berwirausaha. Awalnya bernama Seblak Dago 1, namun karena banyak yang meniru, angka "1" sengaja dihilangkan untuk tampil lebih ikonik..
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        Yang membuat kami berbeda dari seblak lainnya adalah rasa autentik khas Bandung dengan sentuhan inovasi lokal, serta pilihan topping yang melimpah dan kuah yang khas—gurih, pedas, dan bikin nagih.
+
+                    
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow-md flex-1 min-w-[150px] text-center">
+                            <div class="text-orange-500 text-3xl mb-2">
+                                <i class="fas fa-pepper-hot"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800">Bumbu Rahasia</h3>
+                            <p class="text-sm text-gray-600">Resep turun temurun</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md flex-1 min-w-[150px] text-center">
+                            <div class="text-orange-500 text-3xl mb-2">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800">Bahan Segar</h3>
+                            <p class="text-sm text-gray-600">Sayuran & daging pilihan</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md flex-1 min-w-[150px] text-center">
+                            <div class="text-orange-500 text-3xl mb-2">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h3 class="font-bold text-gray-800">Berkualitas</h3>
+                            <p class="text-sm text-gray-600">Standar tinggi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-orange-500 mb-2">Pesan Sekarang</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Isi form berikut untuk memesan seblak favorit Anda</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-orange-50 rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Detail Pesanan</h3>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="menu">Pilih Menu</label>
+                            <select id="menu" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                <option>Seblak Cilok Jamur Enoki - Rp19.000</option>
+                                <option>Seblak Tulang Cuanki - Rp18.000</option>
+                                <option>Seblak Kwetiau Ceker Jamur Enoki - Rp20.000</option>
+                                <option>Seblak Sosis Otak-Otak - Rp18.000</option>
+                                <option>Seblak Ceker Bakso - Rp20.000</option>
+                                <option>Seblak Istimewa Sosis JUmbo - Rp27.000</option>
+                                <option>Seblak Mie Dumpling chesee - Rp20.000</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="quantity">Jumlah</label>
+                            <div class="flex items-center">
+                                <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-1 px-3 rounded-l focus:outline-none">
+                                    -
+                                </button>
+                                <input type="number" id="quantity" value="1" min="1" class="w-16 text-center border-t border-b border-gray-300 py-1">
+                                <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-1 px-3 rounded-r focus:outline-none">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Level Pedas</label>
+                            <div class="flex items-center space-x-4">
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="spicy" class="form-radio text-orange-500" checked>
+                                    <span class="ml-2">Sedang</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="spicy" class="form-radio text-orange-500">
+                                    <span class="ml-2">Pedas</span>
+                                </label>
+                                <label class="inline-flex items-center">
+                                    <input type="radio" name="spicy" class="form-radio text-orange-500">
+                                    <span class="ml-2">Ekstra Pedas</span>
+                                </label>
+                            </div>
+                        </div>
+                            
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="notes">Catatan Tambahan</label>
+                            <textarea id="notes" rows="3" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Contoh: Kurangi pedas, tambah kerupuk, dll."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 bg-orange-100 p-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Detail Pengiriman</h3>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Nama Lengkap</label>
+                            <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Nama Anda">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Nomor Telepon</label>
+                            <input type="tel" id="phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="0812-3456-7890">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="address">Alamat Lengkap</label>
+                            <textarea id="address" rows="3" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Jl. Contoh No. 123, Kecamatan, Kota"></textarea>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="payment">Metode Pembayaran</label>
+                            <select id="payment" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                <option>Bayar di Tempat (COD)</option>
+                                <option>Transfer Bank</option>
+                                <option>E-Wallet (OVO, GoPay, Dana)</option>
+                            </select>
+                        </div>
+                        
+                        <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300">
+                            <i class="fas fa-paper-plane mr-2"></i> Kirim Pesanan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-16 bg-orange-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-orange-500 mb-2">Apa Kata Pelanggan Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Testimoni dari pelanggan yang sudah merasakan kelezatan Seblak Dago</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-orange-200 flex items-center justify-center text-orange-600 font-bold mr-4">
+                            AS
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Andi Susanto</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "Seblaknya enak banget! Pedasnya pas dan kerupuknya masih renyah. Sudah langganan sejak tahun 2015 dan tidak pernah kecewa."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-orange-200 flex items-center justify-center text-orange-600 font-bold mr-4">
+                            BD
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Faisal Alfaqih</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "Seblak seafoodnya juara! Udang dan cuminya segar, porsinya juga banyak. Pelayanannya cepat dan ramah. Recommended banget!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-orange-200 flex items-center justify-center text-orange-600 font-bold mr-4">
+                            CS
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Citra Sari</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "Seblak mienya favorit saya! Mie-nya kenyal dan bumbunya meresap. Sudah mencoba semua varian dan semuanya enak. Bakal balik lagi!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h2 class="text-3xl font-bold text-orange-500 mb-4">Hubungi Kami</h2>
+                    <p class="text-gray-700 mb-6">
+                        Kami siap melayani Anda dengan sebaik-baiknya. Silakan hubungi kami melalui informasi kontak berikut atau kunjungi langsung outlet kami.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-orange-500 mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Alamat</h3>
+                                <p class="text-gray-600">Ruko Taman, Jl. Prof. Dr. Hamka No.90, Ngaliyan, Kec. Ngaliyan, Kota Semarang, Jawa Tengah 50181</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-orange-500 mr-4 mt-1">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Telepon</h3>
+                                <p class="text-gray-600">(022) 1234567</p>
+                                <p class="text-gray-600">0856-8721-933 (WhatsApp)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-orange-500 mr-4 mt-1">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Email</h3>
+                                <p class="text-gray-600">seblakdagobandung@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-orange-500 mr-4 mt-1">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Jam Operasional</h3>
+                                <p class="text-gray-600">Setiap Hari : 11.00 - 22.00 WIB</p>
+                                <p class="text-gray-600">Jumat : 13.00 - 22.00 WIB</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="font-bold text-gray-800 mb-4">Ikuti Kami di Media Sosial</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-orange-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Kirim Pesan</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="contact-name">Nama</label>
+                                <input type="text" id="contact-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Nama Anda">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="contact-email">Email</label>
+                                <input type="email" id="contact-email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="email@contoh.com">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="contact-subject">Subjek</label>
+                                <input type="text" id="contact-subject" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Subjek pesan">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="contact-message">Pesan</label>
+                                <textarea id="contact-message" rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Tulis pesan Anda di sini"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300">
+                                <i class="fas fa-paper-plane mr-2"></i> Kirim Pesan
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div style="width: 100%;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.083578604076!2d110.3436782!3d-6.999439199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b006168165f%3A0xbe5d51f1494415b2!2sSeblak%20Dago%20Bandung%20%2C%20Ngaliyan!5e0!3m2!1sid!2sid!4v1744949082926!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="py-12 bg-orange-500 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-4">Dapatkan Promo Spesial!</h2>
+            <p class="mb-6 max-w-2xl mx-auto">Berlangganan newsletter kami untuk mendapatkan informasi promo, menu baru, dan penawaran khusus lainnya.</p>
+            
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Alamat email Anda" class="flex-grow py-3 px-4 rounded-l focus:outline-none text-gray-800">
+                <button type="submit" class="bg-orange-700 hover:bg-orange-800 py-3 px-6 rounded-r font-bold transition duration-300">
+                    Berlangganan
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-pepper-hot mr-2 text-orange-500"></i> Cabang Seblak Dago
+                    </h3>
+                    <p class="text-gray-400">
+                        Seblak Dago Durian Raya
+                    <p class="text-gray-400">
+                        Seblak Dago Tembalang
+                    <p class="text-gray-400">
+                        Seblak Dago Ngesrep
+                    <p class="text-gray-400">
+                        Seblak Dago Ngaliyan 
+                    <p class="text-gray-400">
+                        Seblak Dago Pasadena
+                    <p class="text-gray-400">
+                        Seblak Dago Tlogosari
+                    <p class="text-gray-400">
+                        Seblak Dago Fatmawati
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Beranda</a></li>
+                        <li><a href="#menu" class="text-gray-400 hover:text-white transition duration-300">Menu</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">Tentang Kami</a></li>
+                        <li><a href="#order" class="text-gray-400 hover:text-white transition duration-300">Pesan Online</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Jam Buka</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex justify-between">
+                            <span>Sabtu - Kamis</span>
+                            <span>11.00 - 22.00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Jumat</span>
+                            <span>13.00 - 22.00</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Kontak</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-orange-500"></i>
+                            <span>Seblak Dago Bandung, Ngaliyan
+                                📍Ruko Taman Ngaliyan, Jl.Prof. Dr. Hamka No.90,
+                                Kota Semarang</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-orange-500"></i>
+                            <span>(022) 1234567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-orange-500"></i>
+                            <span>seblakdagobandung.id</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Seblak Dago. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-orange-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Quantity buttons functionality
+        const quantityInput = document.getElementById('quantity');
+        const minusButton = quantityInput.previousElementSibling;
+        const plusButton = quantityInput.nextElementSibling;
+        
+        minusButton.addEventListener('click', () => {
+            let value = parseInt(quantityInput.value);
+            if (value > 1) {
+                quantityInput.value = value - 1;
+            }
+        });
+        
+        plusButton.addEventListener('click', () => {
+            let value = parseInt(quantityInput.value);
+            quantityInput.value = value + 1;
+        });
+    </script>
+</body>
+</html>
